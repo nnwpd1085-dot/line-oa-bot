@@ -18,7 +18,7 @@ export default async function handler(req, res) {
       if (event.type === "message" && event.message.type === "text") {
         const userMsg = event.message.text;
         const response = await client.messages.create({
-          model: "claude-sonnet-4-20250514",
+          model: claude-haiku-4-5-20251001,
           max_tokens: 1000,
           system: `คุณคือ AI ผู้ช่วยของร้าน อมรินทร์ โคตรเนื้อ ตอบภาษาไทย กระชับ เป็นมิตร`,
           messages: [{ role: "user", content: userMsg }],
